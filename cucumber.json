@@ -1,0 +1,21 @@
+{
+"default":{
+    "formatOptions":{
+        "snippetInterface":"async-await"    },
+"paths":[
+"tests/features/CompletingCensus.feature"
+],
+"require":[
+ "tests/steps/CompletingCensus.ts",
+"tests/support/hooks.ts"
+],
+"requireModule":[
+"ts-node/register"
+],
+"publishQuiet":true,
+"dryRun":false,
+"format":[    
+"html:cucumber-report.html"
+]
+}
+}
