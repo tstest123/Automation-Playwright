@@ -1,0 +1,131 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "completing-census-form;completing-census-form",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Completing Census form",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6456871100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am on Census Form page1 \"Are you completing the 2026 Census Test for:\"",
+            "match": {
+              "location": "tests\\steps\\CompletingCensus.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 571213499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I verify the address \"246 Round Top Dr HARVEST, AL 35749\" is displayed",
+            "match": {
+              "location": "tests\\steps\\CompletingCensus.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36515899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User clicks Yes button",
+            "match": {
+              "location": "tests\\steps\\CompletingCensus.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79978200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User clicks Next",
+            "match": {
+              "location": "tests\\steps\\CompletingCensus.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1103983599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I verify that page2 \"Do YOU live or stay at:\" is displayed",
+            "match": {
+              "location": "tests\\steps\\CompletingCensus.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1024474600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I verify the address \"246 Round Top Dr HARVEST, AL 35749\" is displayed",
+            "match": {
+              "location": "tests\\steps\\CompletingCensus.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5714799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "click Help link",
+            "match": {
+              "location": "tests\\steps\\CompletingCensus.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78690599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17461800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "completing-census-form",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Completing census form",
+    "tags": [],
+    "uri": "tests\\features\\CompletingCensus.feature"
+  }
+]
