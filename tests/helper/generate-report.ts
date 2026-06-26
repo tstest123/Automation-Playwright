@@ -1,7 +1,9 @@
 // generate-report.ts
-const report=require('multiple-cucumber-html-reporter');
+(async()=>{
 
-report.generate({
+const { generate }=await import ('multiple-cucumber-html-reporter');
+
+generate({
   jsonDir: 'test_results',
   reportPath: './',
   metadata: {
