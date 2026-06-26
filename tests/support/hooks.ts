@@ -3,17 +3,22 @@ import { chromium,Browser,BrowserContext,Page } from "playwright/test";
  import {ExcelReader} from '../utils/ExcelReader';
  import {LoginPage} from '../pages/LoginPage';
   import {config}  from '../../config/env';
+  import {invokeBrowser} from '../../config/browsers/browserManager';
 
 
 setDefaultTimeout(60*2000);
-let browser:Browser;
+let browser:any
+//let browser:Browser;
 let censusId :string;
 let baseURL: string;
 
 BeforeAll(async ()=>{
-browser=await chromium.launch({
-headless:false,slowMo:1000,
-});
+  browser=await invokeBrowser();
+
+
+//browser=await chromium.launch({
+//headless:false,slowMo:1000,
+//});
 
 //Load census ID from excel
  censusId=ExcelReader.getCellData('LoginData',1,0);
@@ -50,11 +55,14 @@ await this.attach(images,"image/png");
  }   
 await this.context.close();
 });
-    
+  
+
+/*
 AfterAll(async()=>{
 if(browser){
 await browser.close();
 console.log("Browser closed");
 }
-});
 
+});
+*/
