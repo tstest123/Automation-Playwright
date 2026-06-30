@@ -32,11 +32,13 @@
         await this.completingCensusPage.verifyPageHeader(expectedHeaderPage2); 
         });
 
-       Then('click Help link', async function () {
+       Then('click Help link', async function() {
+        //await this.page.getByRole('button', { name: 'Help' }).click();         
+         await this.completingCensusPage.clickOnHelpLink();
+       });
 
-        await this. page.getByRole('button', { name: 'Help' }).click();  
-        
-        //Read from UI
+         Then('verify the text', async function () {
+          //Read from UI
         const helpSection=this.page.locator('#component170');
         await helpSection.waitFor({state:'visible'});
         const UIHelpText=await helpSection.textContent();
@@ -49,8 +51,11 @@
          
          //Compare both
          expect(UIHelpText?.trim()).toContain(ExpectedHelpTextPage2.trim());
-        });
+});
 
+
+        
+       
 
 
                 

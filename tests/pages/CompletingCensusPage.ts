@@ -1,13 +1,14 @@
 import {expect,Page,Locator}from '@playwright/test';
 export class CompletingCensusPage
 {
-  private page:Page;
-  private headerPage1Locator:Locator;
-  private headerLocatorPage2:Locator;
-  private headerLocatorPage3:Locator;
-  private addressText:Locator;
-  private yesButton:Locator;
-  private nextButton:Locator;
+  readonly page:Page;
+  readonly headerPage1Locator:Locator;
+  readonly headerLocatorPage2:Locator;
+  readonly headerLocatorPage3:Locator;
+  readonly addressText:Locator;
+  readonly yesButton:Locator;
+  readonly nextButton:Locator;
+  readonly helpLink:Locator;
 
     constructor(page:Page)
     {
@@ -19,6 +20,7 @@ export class CompletingCensusPage
     this.addressText=page.locator('Label.form-label.d-block span');  
     this.yesButton=page.getByRole('radio', { name: 'Yes' });
     this.nextButton=page.getByRole('button', { name: 'Next >' });
+    this.helpLink=page.getByRole('button', { name: 'Help' });
     }  
 
 async verifyLoginSuccess(expectedHeaderPage1:string){
@@ -57,11 +59,6 @@ async verifyPageHeaderPage3(expectedHeaderPage3:string){
 expect(actualHeaderPage3?.trim()).toBe( expectedHeaderPage3);
 } 
 
-
-
-
-
-
 async clickOnYesButton(){
 await this.yesButton.click();
 }
@@ -69,8 +66,9 @@ await this.yesButton.click();
 async clickOnNextButton(){
 await this.nextButton.click();
 }
-
-
+async clickOnHelpLink(){
+ await this.helpLink.click();
+}
 
 
 

@@ -10,5 +10,7 @@
 "skipLibCheck":true,
 "outDir":"dist"
 },
-"include":["**/*.ts"],
+"include":[
+ "tests/**/*.ts"
+]
 }
